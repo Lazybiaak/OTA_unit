@@ -14,6 +14,8 @@ RemoteOTA ota(
 const int ledPin = LED_BUILTIN;  // usually GPIO2 on ESP32
 
 void setup() {
+  Serial.begin(115200);
+  Serial.println("Starting Remote OTA Example...");
   pinMode(ledPin, OUTPUT);
 
   ota.begin(ssid, password);
@@ -21,8 +23,6 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(ledPin, HIGH);
-  delay(500);
-  digitalWrite(ledPin, LOW);
-  delay(500);
+  Serial.println("This version is: 0.0.0");
+  delay(2000);
 }

@@ -6,7 +6,7 @@ const char* ssid = "Apple";
 const char* password = "123456789";
 
 RemoteOTA ota(
-  "0.0.1",
+  "0.0.2",
   "https://lazybiaak.github.io/OTA_unit/ota/version.txt",
   "https://lazybiaak.github.io/OTA_unit/ota/firmware.bin"
 );
@@ -23,6 +23,6 @@ void setup() {
 }
 
 void loop() {
-  Serial.println("This version is: 0.0.1");
+  Serial.println("This version is: 0.0.2");
   delay(2000);
 }
